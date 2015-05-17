@@ -1,14 +1,11 @@
 package com.tsystems.javaschool.tasks;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * Created by root on 16.05.2015.
+ * Created by Mikhail Nemenko on 16.05.2015.
  */
 public class DuplicateFinderImpl implements DuplicateFinder {
 
@@ -18,9 +15,11 @@ public class DuplicateFinderImpl implements DuplicateFinder {
         String line = null; //временная переменная для хранения строк из файла sourceFile
         try (BufferedReader br = new BufferedReader(new FileReader(sourceFile)); //использую try-with-resources для автозакрытия потоков
              FileWriter fw = new FileWriter(targetFile, true)) { //создаю 2 потока, на чтение и на запись с возможность дописывать файл
-            if (!targetFile.exists()) { //проверяю существование файла targetFile, если его нету создаю новый
-                System.out.println("привет");
-            }
+            if (!sourceFile.exists())
+                throw new FileNotFoundException(); //проверяю существование файла sourceFile, если его нету выбрасываю FileNotFoundException и возвращаю false
+            if (!targetFile.exists())
+                targetFile.createNewFile(); //проверяю существование файла targetFile, если его нету создаю новый
+
             while ((line = br.readLine()) != null) { //считываем построчно данные из sourceFile
                 if (!map.containsKey(line)) { //проверяем не содержит ли мапка ключ со значением строки
                     map.put(line, 1); //так как данного ключа нет ложим в мапу и ставим value 1
@@ -29,9 +28,12 @@ public class DuplicateFinderImpl implements DuplicateFinder {
                 }
             }
             for (Map.Entry<String, Integer> lines : map.entrySet()) { //бежим по мапе и пишем в файл
-                fw.write("\n" + lines.getKey() + "[" + lines.getValue() + "]");
+                fw.write(lines.getKey() + "[" + lines.getValue() + "]\n");
             }
             return true;
+        } catch (FileNotFoundException ex) {
+            System.out.println("Файла a.txt не существует!, проверьте директорию папки interfaces!");
+            return false;
         } catch (Exception ex) {
             return false;
         }

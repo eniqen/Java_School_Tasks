@@ -14,6 +14,6 @@ public class TestMain {
 
         /*Task 2. DuplicateFinder*/
         DuplicateFinder d = new DuplicateFinderImpl();
-        d.process(new File("C:/Users/1/Desktop/interfaces/src/com/tsystems/javaschool/tasks/a.txt"), new File("C:/Users/1/Desktop/interfaces/src/com/tsystems/javaschool/tasks/b.txt"));
+        d.process(new File("a.txt"), new File("b.txt"));
     }
 }
