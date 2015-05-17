@@ -4,9 +4,10 @@ import java.util.LinkedList;
 import java.util.NoSuchElementException;
 
 /**
- * Created by root on 16.05.2015.
+ * Created by Mokhail Nemenko on 16.05.2015.
  */
 public class CalculatorImpl implements Calculator {
+    /*В данной задаче применил алгоритм Обратной польской записи*/
     @Override
     public String evaluate(String statement) {
         try {
