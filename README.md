@@ -33,10 +33,8 @@ com
 
 Название интерфейса
 com.tsystems.javaschool.tasks.Calculator
-
 Имя класса
 com.tsystems.javaschool.tasks.CalculatorImpl
-
 Имя архива
 calculator.zip
 
@@ -47,7 +45,7 @@ c = new CalculatorImpl();
 System.out.println(c.evaluate("7*6/2+8")); // Результат: 29
 c = new CalculatorImpl(); System.out.println(c.evaluate("-12)1//(")); // Результат: null
 
-2. Subsequence
+<strong>2. Subsequence</strong>
 Заданы две последовательности X1, X2,..., Xn и Y1, Y2,…, Yk произвольных элементов (java.lang.Object). Определить, можно ли получить последовательность X путем вычеркивания некоторых элементов из Y?
 В качестве входных параметра в метод передаются два списка: первый – список Xi, второй – список Yi.
 Название интерфейса
