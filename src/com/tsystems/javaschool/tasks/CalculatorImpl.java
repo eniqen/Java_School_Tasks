@@ -38,7 +38,7 @@ public class CalculatorImpl implements Calculator {
             while (!op.isEmpty())
                 processOperator(st, op.removeLast());
             return st.get(0).toString();  // возвращаем полученный результат
-        } catch (NoSuchElementException ex) {
+        } catch (Exception ex) {
             return null;
         }
     }

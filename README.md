@@ -69,7 +69,8 @@ com.tsystems.javaschool.tasks.DuplicateFinderImpl
 Имя архива
 duplicates.zip
 Пример
-DuplicateFinder d = new DuplicateFinderImpl(); d.process(new File("a.txt"), new File("b.txt"));
+DuplicateFinder d = new DuplicateFinderImpl();
+d.process(new File("a.txt"), new File("b.txt"));
 
 a.txt
 ccc
