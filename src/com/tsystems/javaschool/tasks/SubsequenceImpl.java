@@ -14,7 +14,7 @@ public class SubsequenceImpl implements Subsequence {
             for (int j = marker; j < y.size(); j++) { //с листом в котором проверяем последовательность эллементов
                 if (x.get(i).equals(y.get(j))) { //если эллементы совпадают инкрементим каунт и ставим маркер с данного места
                     count++;
-                    marker = ++j;
+                    marker = j++;
                     break;
                 }
             }
