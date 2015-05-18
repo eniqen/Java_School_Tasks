@@ -11,6 +11,10 @@ import java.util.NoSuchElementException;
  */
 public class CalculatorImpl implements Calculator {
     /*В данной задаче применил алгоритм Обратной польской записи*/
+
+    public CalculatorImpl() {
+    }
+
     @Override
     public String evaluate(String statement) {
         try {

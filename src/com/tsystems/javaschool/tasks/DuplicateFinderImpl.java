@@ -8,6 +8,8 @@ import java.util.TreeMap;
  * Created by Mikhail Nemenko on 16.05.2015.
  */
 public class DuplicateFinderImpl implements DuplicateFinder {
+    public DuplicateFinderImpl() {
+    }
 
     @Override
     public boolean process(File sourceFile, File targetFile) {

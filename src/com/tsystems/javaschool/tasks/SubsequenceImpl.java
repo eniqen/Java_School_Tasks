@@ -6,6 +6,9 @@ import java.util.*;
  * Created by Mikhail Nemenko on 16.05.2015.
  */
 public class SubsequenceImpl implements Subsequence {
+    public SubsequenceImpl() {
+    }
+
     @Override
     public boolean find(List x, List y) {
         int count = 0; //переменная проверяющая совпадает ли кол-во найденых элементов с кол-вом из 1 списка
