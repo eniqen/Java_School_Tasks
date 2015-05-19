@@ -16,7 +16,7 @@ public class TestMain {
 
         /*Task 3. Subsequence*/
         Subsequence s = new SubsequenceImpl();
-        boolean b = s.find(Arrays.asList("A", "B", "C", "D"), Arrays.asList("BD", "A", "ABC", "B", "M", "D", "M", "C", "DC", "D"));
+        boolean b = s.find(Arrays.asList("B", "A", "C", "D"), Arrays.asList("BD", "A", "ABC", "B", "M", "D", "M", "C", "DC", "D"));
         System.out.println(b); // Результат: true
 
         /*Task 3. DuplicateFinder*/
